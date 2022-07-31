@@ -1,15 +1,14 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Home from './src/screens/Home'
 
-const App = () => {
+const SearchBar = () => {
   return (
     <View>
-      <Home/>
+      <Text>SearchBar</Text>
     </View>
   )
 }
 
-export default App
+export default SearchBar
 
 const styles = StyleSheet.create({})
