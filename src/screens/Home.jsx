@@ -8,7 +8,7 @@ import ContactMenu from "../components/Home/ContactMenu";
 const Home = () => {
   return (
     <View style={styles.container}>
-      <SafeAreaView style={{height:'100%'}}>
+      <SafeAreaView style={{height:"100%"}} >
 
       {/* Header */}
       <Header />

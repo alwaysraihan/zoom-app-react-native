@@ -31,12 +31,8 @@ const MenuButtons = () => {
         <View style={styles.buttonContainer} key={`btn_${index}`}>
           <TouchableOpacity
             style={{
-              width: 50,
-              height: 50,
-              borderRadius: 15,
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: btn.customColor ? btn.customColor : "#0470DC",
+             ...styles.button,
+              backgroundColor: btn.customColor?btn.customColor: "#0470DC",
             }}
           >
             <FontAwesome name={btn.name} size={23} color="#efefef" />
@@ -75,6 +71,6 @@ const styles = StyleSheet.create({
     color: "#858585",
     fontSize: 12,
     paddingTop: 10,
-    fontWeight: 600,
+    fontWeight: "600",
   },
 });
