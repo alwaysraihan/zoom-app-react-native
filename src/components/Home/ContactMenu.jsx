@@ -1,43 +1,47 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import AntDesign from "react-native-vector-icons/AntDesign";
 const contactMenuButtons = [
   {
     type: "starred",
-    
-    
+    name:"Starred"
   },
   {
     type: "contact",
-    name:"Raihan Sarkar",
-    photo:require("../../../assets/raihan.png")
-
+    name: "Raihan Sarkar",
+    photo: require("../../../assets/raihan.png"),
   },
   {
     type: "contact",
-    name:"Nurul Islam",
-    photo:require("../../../assets/nurul.png")
-
+    name: "Nurul Islam",
+    photo: require("../../../assets/nurul.png"),
   },
   {
     type: "contact",
-    name:"Jassica",
-    photo:require("../../../assets/office.jpg")
-
+    name: "Jassica",
+    photo: require("../../../assets/office.jpg"),
   },
 ];
 const ContactMenu = () => {
   return (
     <View style={styles.container}>
       {/* Contact Container */}
-      <View style={styles.row}>
-        {/* Image  */}
-        <View style={styles.starIcon}>
-          <AntDesign name="star" size={30} color="#efefef" />
+      {contactMenuButtons.map((contact, index) => (
+        <View style={styles.row} key={`contact_${index}`}>
+          {/* Image  */}
+          {contact.type === "starred" ? (
+            <View style={styles.starIcon}>
+              <AntDesign name="star" size={30} color="#efefef" />
+            </View>
+          ) : (
+            
+            <Image source={contact.photo} style={styles.image}/>
+          )}
+
+          {/* Text */}
+          <Text style={styles.text}>{contact.name}</Text>
         </View>
-        {/* Text */}
-        <Text style={styles.text}>Starred</Text>
-      </View>
+      ))}
     </View>
   );
 };
@@ -64,4 +68,9 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     fontSize: 18,
   },
+  image:{
+    width:55,
+    height:55,
+    borderRadius:20,
+  }
 });

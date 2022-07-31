@@ -5,7 +5,7 @@ const buttonItems = [
   {
     id: 1,
     name: "video-camera",
-    title: "New Meeting",
+    title: "Meeting",
     customColor: "#FF751F",
   },
   {
@@ -21,7 +21,7 @@ const buttonItems = [
   {
     id: 4,
     name: "upload",
-    title: "Share Screen",
+    title: "Share",
   },
 ];
 const MenuButtons = () => {

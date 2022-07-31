@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View,SafeAreaView } from "react-native";
+import { StyleSheet, Text, View,SafeAreaView, ScrollView } from "react-native";
 import React from "react";
 import Header from "../components/Home/Header";
 import SearchBar from "../components/Home/SearchBar";
@@ -7,8 +7,10 @@ import ContactMenu from "../components/Home/ContactMenu";
 
 const Home = () => {
   return (
+    
     <View style={styles.container}>
       <SafeAreaView style={{height:"100%"}} >
+      <ScrollView showsVerticalScrollIndicator={false}>
 
       {/* Header */}
       <Header />
@@ -18,6 +20,7 @@ const Home = () => {
       <MenuButtons />
       {/* Contacts Menu */}
       <ContactMenu />
+    </ScrollView>
       </SafeAreaView>
     </View>
   );
