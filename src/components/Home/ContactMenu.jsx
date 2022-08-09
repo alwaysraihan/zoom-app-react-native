@@ -4,13 +4,9 @@ import AntDesign from "react-native-vector-icons/AntDesign";
 const contactMenuButtons = [
   {
     type: "starred",
-    name:"Starred"
+    name: "Starred",
   },
-  {
-    type: "contact",
-    name: "Raihan Sarkar",
-    photo: require("../../../assets/raihan.png"),
-  },
+
   {
     type: "contact",
     name: "Nurul Islam",
@@ -20,6 +16,11 @@ const contactMenuButtons = [
     type: "contact",
     name: "Jassica",
     photo: require("../../../assets/office.jpg"),
+  },
+  {
+    type: "contact",
+    name: "Raihan Sarkar",
+    photo: require("../../../assets/raihan.png"),
   },
 ];
 const ContactMenu = () => {
@@ -34,8 +35,7 @@ const ContactMenu = () => {
               <AntDesign name="star" size={30} color="#efefef" />
             </View>
           ) : (
-            
-            <Image source={contact.photo} style={styles.image}/>
+            <Image source={contact.photo} style={styles.image} />
           )}
 
           {/* Text */}
@@ -68,9 +68,9 @@ const styles = StyleSheet.create({
     paddingLeft: 15,
     fontSize: 18,
   },
-  image:{
-    width:55,
-    height:55,
-    borderRadius:20,
-  }
+  image: {
+    width: 55,
+    height: 55,
+    borderRadius: 20,
+  },
 });

@@ -24,16 +24,23 @@ const buttonItems = [
     title: "Share",
   },
 ];
-const MenuButtons = () => {
+const MenuButtons = ({navigation}) => {
+  const openMeeting=()=>{
+    navigation.navigate("MeetingRoom")
+  }
   return (
     <View style={styles.container}>
       {buttonItems.map((btn, index) => (
         <View style={styles.buttonContainer} key={`btn_${index}`}>
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
              ...styles.button,
               backgroundColor: btn.customColor?btn.customColor: "#0470DC",
             }}
+          > */}
+           <TouchableOpacity
+           onPress={()=>openMeeting()}
+            style={styles.button}
           >
             <FontAwesome name={btn.name} size={23} color="#efefef" />
           </TouchableOpacity>
@@ -66,6 +73,7 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor:"blue",
   },
   menuText: {
     color: "#858585",
