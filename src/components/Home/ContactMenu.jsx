@@ -9,7 +9,7 @@ const contactMenuButtons = [
 
   {
     type: "contact",
-    name: "Nurul Islam",
+    name: "Raihan Sarkar",
     photo: require("../../../assets/nurul.png"),
   },
   {

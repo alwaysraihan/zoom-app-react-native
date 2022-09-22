@@ -24,6 +24,8 @@ export default function App() {
               title:"Start A Meeting",
               headerStyle: {
                 backgroundColor:"#1c1c1c",
+                elevation: 0, // remove shadow on Android
+                shadowOpacity: 0, // remove shadow on iOS
               },
               headerTintColor:"white",
               headerTitleAlign:"center"
