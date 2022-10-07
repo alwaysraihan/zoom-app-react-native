@@ -9,7 +9,7 @@ const contactMenuButtons = [
 
   {
     type: "contact",
-    name: "Raihan Sarkar",
+    name: "Nurul Islam",
     photo: require("../../../assets/nurul.png"),
   },
   {
@@ -19,7 +19,7 @@ const contactMenuButtons = [
   },
   {
     type: "contact",
-    name: "Raihan Sarkar",
+    name: "Raihan",
     photo: require("../../../assets/raihan.png"),
   },
 ];

@@ -36,10 +36,8 @@ const MeetingRoom = ({ navigation }) => {
     socket.emit("join-room", { roomId: meetId, userName: name });
   };
   useEffect(() => {
-    console.log("hello");
     socket.on("connection", () => console.log("connected"));
     socket.on("all-users", (users) => {
-      console.log("Active Users");
       setActiveUsers(users);
     });
   }, []);
